@@ -4,7 +4,7 @@ import Search from "./components/Search";
 
 function App() {
   const [state, setState] = useState({
-    s: "",
+    inputValue: "",
     results: [],
     selected: {},
   });
@@ -12,7 +12,7 @@ function App() {
 
   const search = (e) => {
     if (e.key === "Enter") {
-      fetch(`${apiUrl}&s=${state.s}`)
+      fetch(`${apiUrl}&s=${state.inputValue}`)
         .then((response) => response.json())
         .then((data) => {
           let results = data.Search;
@@ -24,10 +24,10 @@ function App() {
   };
 
   const handleInput = (e) => {
-    let s = e.target.value;
+    let inputValue = e.target.value;
 
     setState((prevState) => {
-      return { ...prevState, s: s };
+      return { ...prevState, inputValue };
     });
   };
 
