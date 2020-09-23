@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Search from "./components/Search";
 import Results from "./components/Results";
-import Popup from "./components/Popup";
+// import Popup from "./components/Popup";
 
 function App() {
   const [state, setState] = useState({
@@ -41,7 +41,7 @@ function App() {
       <main className="app-main">
         <Search handleInput={handleInput} search={search} />
         <Results results={state.results} />
-        <Popup />
+        {/* <Popup /> */}
       </main>
     </div>
   );
