@@ -32,12 +32,3 @@
   background-color: #fff;
   color: #223343;
 }
-
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #223343;
-  width: 100vw;
-  height: 100vh;
-}
