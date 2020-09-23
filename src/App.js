@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Search from "./components/Search";
+import Results from "./components/Results";
 
 function App() {
   const [state, setState] = useState({
@@ -38,6 +39,7 @@ function App() {
       </header>
       <main className="app-main">
         <Search handleInput={handleInput} search={search} />
+        <Results results={state.results} />
       </main>
     </div>
   );
